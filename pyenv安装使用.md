@@ -15,9 +15,8 @@
 
 >echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 
-重启shell
-
->exec $SHELL
+使oyenv命令生效
+>source ~/.bash_profile
 
 ## 安装Python
 
