@@ -9,9 +9,9 @@
 >git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 
 配置环境变量
->echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+>echo 'export PYENV_ROOT=$HOME/.pyenv' >> ~/.bash\_profile
 >
->echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
+>echo 'export PATH=$PYENV_ROOT/bin:$PATH' >> ~/.bash\_profile
 
 >echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
 
