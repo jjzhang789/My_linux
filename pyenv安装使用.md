@@ -6,25 +6,23 @@
 
 
 安装pyenv
->curl -L https://raw.githubusercontent.com/yyuu/pyenv-installer/master/bin/pyenv-installer | bash
+>git clone https://github.com/yyuu/pyenv.git ~/.pyenv
 
+配置环境变量
+>echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bash_profile
+>
+>echo 'export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bash_profile
 
-配置环境变量， 在 `~/.bash_profile`里增加如下内容
-<pre>
-bash
-export PATH="~/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-</pre>
+>echo 'eval "$(pyenv init -)"' >> ~/.bash_profile
+
+重启shell
+
+>exec $SHELL
 
 ## 安装Python
 
-安装编译工具
->yum -y install gcc make patch
-
-
-安装依赖
->yum -y install gdbm-devel openssl-devel sqlite-devel readline-devel zlib-devel bzip2-devel
+安装依赖与编译工具
+>yum -y install gcc make patch install gdbm-devel openssl-devel sqlite-devel readline-devel zlib-devel bzip2-devel
 
 
 安装Python 3.5.2
@@ -40,7 +38,6 @@ eval "$(pyenv virtualenv-init -)"
 
 编辑 `~/.pip/pip.conf`, 输入以下内容
 <pre>
-  ini
   [global]
   index-url = http://mirrors.aliyun.com/pypi/simple/
   trusted-host = mirrors.aliyun.com
