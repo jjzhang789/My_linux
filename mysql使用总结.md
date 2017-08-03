@@ -35,3 +35,8 @@
 
 12、重载权限信息到内存：
 >flush privileges ;
+
+13、更改用户密码：
+>update user set password=PASSWORD('密码') where 条件;
+
+>flush privileges ;
