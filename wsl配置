@@ -1,0 +1,89 @@
+{
+    "$schema": "https://aka.ms/terminal-profiles-schema",
+    
+    "theme": "dark",
+
+    "defaultProfile": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+
+    "copyOnSelect": true,
+
+    "copyFormatting": false,
+
+    "profiles":
+    {
+        "defaults":
+        {
+            
+        },
+        "list":
+        [
+            {
+                
+                "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+                "name": "Windows PowerShell",
+                "commandline": "powershell.exe",
+                "hidden": false
+            },
+            {
+                
+                "guid": "{0caa0dad-35be-5f56-a8ff-afceeeaa6101}",
+                "name": "命令提示符",
+                "commandline": "cmd.exe",
+                "hidden": false
+            },
+            {
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
+                "hidden": true,
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
+            },
+            {
+                "guid": "{c6eaf9f4-32a7-5fdc-b5cf-066e8a4b1e40}",
+                "hidden": false,
+                "name": "Ubuntu-18.04",
+                "source": "Windows.Terminal.Wsl",
+                //"acrylicOpacity":1,
+                "colorScheme": "star",
+                "useAcrylic": true,
+    	"backgroundImage": "ms-appdata:///roaming/wsl.jpg",
+    	"backgroundImageStretchMode": "uniformToFill",
+    	"backgroundImageOpacity": 0.2
+            }
+        ]
+    },
+
+     
+    "schemes": [
+			{
+		      "name": "star",
+		      "black": "#2E3436",
+		      "red": "#CC0000",
+		      "green": "#4E9A06",
+		      "yellow": "#C4A000",
+		      "blue": "#3465A4",
+		      "purple": "#75507B",
+		      "cyan": "#06989A",
+		      "white": "#D3D7CF",
+		      "brightBlack": "#555753",
+		      "brightRed": "#EF2929",
+		      "brightGreen": "#8AE234",
+		      "brightYellow": "#FCE94F",
+		      "brightBlue": "#729FCF",
+		      "brightPurple": "#AD7FA8",
+		      "brightCyan": "#34E2E2",
+		      "brightWhite": "#EEEEEC",
+		      "background": "#000000",
+		      "foreground": "#FFFFFF"
+		    }
+	],
+    "actions":
+    [
+        
+        { "command": {"action": "copy", "singleLine": false }, "keys": "ctrl+c" },
+        { "command": "paste", "keys": "ctrl+v" },
+
+        { "command": "find", "keys": "ctrl+shift+f" },
+
+        { "command": { "action": "splitPane", "split": "auto", "splitMode": "duplicate" }, "keys": "alt+shift+d" }
+    ]
+}
