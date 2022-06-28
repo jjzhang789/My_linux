@@ -1,4 +1,4 @@
-##Mysql 使用总结
+## Mysql 使用总结
 
 1、添加用户并赋权：
 >grant 权限 on 数据库 to 用户@主机 identified by '密码' ;
